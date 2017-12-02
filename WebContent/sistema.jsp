@@ -3,8 +3,10 @@
 <head>
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.css" />
-	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.js"></script>
-	<script type="text/javascript" src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+<script type="text/javascript"
+	src="https://code.jquery.com/jquery-3.1.0.js"></script>
+<script type="text/javascript"
+	src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
 
 </head>
 <body>
@@ -22,7 +24,7 @@
 			<button id="btnEnviar" type="submit">Enviar</button>
 		</form>
 	</div>
-
+	<button id="chamarModal">chamar formulario</button>
 
 
 	<script>
@@ -53,12 +55,16 @@
 
 			$("#btnCalcular").on('click', function() {
 				vproduto = $("#produto").val();
-				vpreco = eval( $("#preco").val() );
-				vpreco = eval( $("#preco").val() );
-				vquantidade = eval( $("#quantidade").val() );
+				vpreco = eval($("#preco").val());
+				vpreco = eval($("#preco").val());
+				vquantidade = eval($("#quantidade").val());
 				vsubtotal = vpreco * vquantidade;
 				//imprime o subtotal
-				$("#subtotal").val(vsubtotal); 
+				$("#subtotal").val(vsubtotal);
+			});
+
+			$("#chamarModal").on('click', function() {
+				$("#dialogo").dialog("open");
 			});
 
 		});
